@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d966c092358d9a8b8351606cfb0eeb32 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d966c092358d9a8b8351606cfb0eeb32" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d966c092358d9a8b8351606cfb0eeb32 = L.map(
+                "map_d966c092358d9a8b8351606cfb0eeb32",
+                {
+                    center: [-19.0, 30.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8f1a18cfb4247f7fd5cada62cb6bbfc9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8f1a18cfb4247f7fd5cada62cb6bbfc9.addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+            var poly_line_06e41ccd8126c48d16862b72280c8b3e = L.polyline(
+                [[-17.8292, 31.0522], [-17.85, 31.03], [-17.90028, 30.79111], [-17.83, 30.67], [-17.522, 30.988], [-17.5, 30.98], [-17.25245, 31.02167], [-17.301, 31.33], [-17.42, 31.52], [-17.65, 31.74], [-17.85544, 31.3761], [-17.12, 31.78], [-16.81829, 31.27706], [-18.18576, 32.80516], [-18.56119, 32.09581], [-18.9, 32.45], [-18.97, 32.42], [-18.97, 32.42], [-19.15, 32.53], [-19.38, 31.95], [-20.58, 31.59], [-20.59644, 31.60193], [-21.0, 31.65], [-20.35, 30.73], [-20.3, 30.64], [-20.3, 30.6], [-20.18, 30.75], [-20.86, 29.51], [-21.0, 29.42], [-21.05, 29.37], [-21.08, 29.34], [-20.75842, 29.36061], [-20.533, 29.285], [-20.39306, 28.97389], [-20.56, 28.52], [-20.94, 29.01], [-19.78, 29.37], [-19.45, 29.82], [-18.65, 27.95], [-18.37, 27.82], [-18.85, 27.65], [-18.39, 26.82], [-18.2, 29.2], [-18.25, 29.7], [-18.33, 29.88], [-18.43944, 29.88056], [-18.65, 29.48], [-18.9, 29.84], [-18.95, 30.05], [-19.02587, 30.25421], [-19.045, 30.27], [-19.06, 30.3], [-18.715, 30.41], [-18.69962, 30.39954], [-19.02, 30.89], [-18.25, 30.85], [-19.34116, 29.99828], [-17.4, 30.1], [-17.3, 30.2], [-17.35, 30.35], [-17.32, 30.38], [-17.2, 30.05], [-17.05, 30.62], [-16.32, 30.76], [-16.17, 30.57], [-16.12, 30.28]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+            var marker_dfe61cc208aeb1bdb059c707b59014b9 = L.marker(
+                [-17.8292, 31.0522],
+                {
+}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_51a9ff04caf4cd14b9337a23573e8788 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd79a319abc6ddca276ef6b1128592cd = $(`<div id="html_fd79a319abc6ddca276ef6b1128592cd" style="width: 100.0%; height: 100.0%;">START: Harare</div>`)[0];
+                popup_51a9ff04caf4cd14b9337a23573e8788.setContent(html_fd79a319abc6ddca276ef6b1128592cd);
+            
+        
+
+        marker_dfe61cc208aeb1bdb059c707b59014b9.bindPopup(popup_51a9ff04caf4cd14b9337a23573e8788)
+        ;
+
+        
+    
+    
+            marker_dfe61cc208aeb1bdb059c707b59014b9.bindTooltip(
+                `<div>
+                     START: Harare
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ffe1f1358352d504963c9962e5b61d6a = L.circleMarker(
+                [-17.85, 31.03],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_7a305534e93227826b46dfd8f8d9e435 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cc0add4b61d41486a4cad54bce6afbd = $(`<div id="html_7cc0add4b61d41486a4cad54bce6afbd" style="width: 100.0%; height: 100.0%;">1. C22 — Mukuvisi<br>Mukuvisi | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Mukuvisi River, Harare</div>`)[0];
+                popup_7a305534e93227826b46dfd8f8d9e435.setContent(html_7cc0add4b61d41486a4cad54bce6afbd);
+            
+        
+
+        circle_marker_ffe1f1358352d504963c9962e5b61d6a.bindPopup(popup_7a305534e93227826b46dfd8f8d9e435)
+        ;
+
+        
+    
+    
+            circle_marker_ffe1f1358352d504963c9962e5b61d6a.bindTooltip(
+                `<div>
+                     1. C22 – Mukuvisi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f2e37c3adbe9ec1082e3d05714031a3 = L.circleMarker(
+                [-17.90028, 30.79111],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_856b590f753ac5ce8da0eb5f95746eea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_384425f69ba6cfbadb389ca0ac3f048d = $(`<div id="html_384425f69ba6cfbadb389ca0ac3f048d" style="width: 100.0%; height: 100.0%;">2. C24 — Chivero_u/s<br>Marimba | Submersible Sensor<br>Confidence: High<br>Exact/near exact Lake Chivero upstream</div>`)[0];
+                popup_856b590f753ac5ce8da0eb5f95746eea.setContent(html_384425f69ba6cfbadb389ca0ac3f048d);
+            
+        
+
+        circle_marker_9f2e37c3adbe9ec1082e3d05714031a3.bindPopup(popup_856b590f753ac5ce8da0eb5f95746eea)
+        ;
+
+        
+    
+    
+            circle_marker_9f2e37c3adbe9ec1082e3d05714031a3.bindTooltip(
+                `<div>
+                     2. C24 – Chivero_u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ff22e463ec2885200cd5abae57edba8 = L.circleMarker(
+                [-17.83, 30.67],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_6c6d2242b4f2dfca9955bddab1bb7703 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd5f32d870e41d564f175d824c0bf304 = $(`<div id="html_cd5f32d870e41d564f175d824c0bf304" style="width: 100.0%; height: 100.0%;">3. C83 — Manyame_dam_u/s<br>Gwebi | Submersible Sensor<br>Confidence: Medium<br>Near exact Manyame/Robertson reservoir</div>`)[0];
+                popup_6c6d2242b4f2dfca9955bddab1bb7703.setContent(html_cd5f32d870e41d564f175d824c0bf304);
+            
+        
+
+        circle_marker_1ff22e463ec2885200cd5abae57edba8.bindPopup(popup_6c6d2242b4f2dfca9955bddab1bb7703)
+        ;
+
+        
+    
+    
+            circle_marker_1ff22e463ec2885200cd5abae57edba8.bindTooltip(
+                `<div>
+                     3. C83 – Manyame_dam_u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a622e1d513c645c15930dba3b1c7df5 = L.circleMarker(
+                [-17.522, 30.988],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_7bf64577b95014669f2f92cd6b5dd3f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35bdf61fbe87f271daf02546ef79bf21 = $(`<div id="html_35bdf61fbe87f271daf02546ef79bf21" style="width: 100.0%; height: 100.0%;">4. D25 — Mazowe/r g/w<br>Mazowe | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Mazowe Dam/Mazowe area</div>`)[0];
+                popup_7bf64577b95014669f2f92cd6b5dd3f7.setContent(html_35bdf61fbe87f271daf02546ef79bf21);
+            
+        
+
+        circle_marker_8a622e1d513c645c15930dba3b1c7df5.bindPopup(popup_7bf64577b95014669f2f92cd6b5dd3f7)
+        ;
+
+        
+    
+    
+            circle_marker_8a622e1d513c645c15930dba3b1c7df5.bindTooltip(
+                `<div>
+                     4. D25 – Mazowe/r g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4752daf80071333e5c47fd574e2c3799 = L.circleMarker(
+                [-17.5, 30.98],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_0aeeadcb8d45a0c4c1e4e33ad7f468ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77042bdf9f1e86fb7cf9d8f739bddad4 = $(`<div id="html_77042bdf9f1e86fb7cf9d8f739bddad4" style="width: 100.0%; height: 100.0%;">5. D60 — Viginia g/w<br>Mazowe | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Mazowe River/Mazowe area</div>`)[0];
+                popup_0aeeadcb8d45a0c4c1e4e33ad7f468ab.setContent(html_77042bdf9f1e86fb7cf9d8f739bddad4);
+            
+        
+
+        circle_marker_4752daf80071333e5c47fd574e2c3799.bindPopup(popup_0aeeadcb8d45a0c4c1e4e33ad7f468ab)
+        ;
+
+        
+    
+    
+            circle_marker_4752daf80071333e5c47fd574e2c3799.bindTooltip(
+                `<div>
+                     5. D60 – Viginia g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39002097838c84197ba9f146c442f1d4 = L.circleMarker(
+                [-17.25245, 31.02167],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_0768954352ba4cd4f3cda1aaae47c5e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38ec1412f1f7d50751b47f35c3410edf = $(`<div id="html_38ec1412f1f7d50751b47f35c3410edf" style="width: 100.0%; height: 100.0%;">6. D39 — Mwenje dam d/s g/w<br>Mazowe | Submersible Sensor<br>Confidence: High<br>Exact named feature: Mwenje Dam</div>`)[0];
+                popup_0768954352ba4cd4f3cda1aaae47c5e6.setContent(html_38ec1412f1f7d50751b47f35c3410edf);
+            
+        
+
+        circle_marker_39002097838c84197ba9f146c442f1d4.bindPopup(popup_0768954352ba4cd4f3cda1aaae47c5e6)
+        ;
+
+        
+    
+    
+            circle_marker_39002097838c84197ba9f146c442f1d4.bindTooltip(
+                `<div>
+                     6. D39 – Mwenje dam d/s g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8123be1269215fd499c5dc0f59177022 = L.circleMarker(
+                [-17.301, 31.33],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_440d923f78fcffab31d2744fd4db2c43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccb04d9a0c99dcbc5673199204e4e94c = $(`<div id="html_ccb04d9a0c99dcbc5673199204e4e94c" style="width: 100.0%; height: 100.0%;">7. D38 — Bindura sengere g/w<br>Mazowe | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Bindura area</div>`)[0];
+                popup_440d923f78fcffab31d2744fd4db2c43.setContent(html_ccb04d9a0c99dcbc5673199204e4e94c);
+            
+        
+
+        circle_marker_8123be1269215fd499c5dc0f59177022.bindPopup(popup_440d923f78fcffab31d2744fd4db2c43)
+        ;
+
+        
+    
+    
+            circle_marker_8123be1269215fd499c5dc0f59177022.bindTooltip(
+                `<div>
+                     7. D38 – Bindura sengere g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0507a23bf02494706d2ab07698f32ec7 = L.circleMarker(
+                [-17.42, 31.52],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_3f16deb1a2116a598bd28e3d449c9b1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58ad10f7efe6a4112c281c9ef848f1e2 = $(`<div id="html_58ad10f7efe6a4112c281c9ef848f1e2" style="width: 100.0%; height: 100.0%;">8. D10 — Lion's head dam g/w<br>Mazowe | Radar Sensor<br>Confidence: Low<br>Planning proxy: Mubvinzi/Shamva area</div>`)[0];
+                popup_3f16deb1a2116a598bd28e3d449c9b1d.setContent(html_58ad10f7efe6a4112c281c9ef848f1e2);
+            
+        
+
+        circle_marker_0507a23bf02494706d2ab07698f32ec7.bindPopup(popup_3f16deb1a2116a598bd28e3d449c9b1d)
+        ;
+
+        
+    
+    
+            circle_marker_0507a23bf02494706d2ab07698f32ec7.bindTooltip(
+                `<div>
+                     8. D10 – Lion's head dam g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee6e725a6282b5bd0f7b4e868bdbc7b0 = L.circleMarker(
+                [-17.65, 31.74],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_28078ed55bfe12ef777bf8a2b31709d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b00c2178eb101681fd0c04769591ce6c = $(`<div id="html_b00c2178eb101681fd0c04769591ce6c" style="width: 100.0%; height: 100.0%;">9. D51 — Kilmer flume<br>Mazowe | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Murodzi/Murehwa area</div>`)[0];
+                popup_28078ed55bfe12ef777bf8a2b31709d7.setContent(html_b00c2178eb101681fd0c04769591ce6c);
+            
+        
+
+        circle_marker_ee6e725a6282b5bd0f7b4e868bdbc7b0.bindPopup(popup_28078ed55bfe12ef777bf8a2b31709d7)
+        ;
+
+        
+    
+    
+            circle_marker_ee6e725a6282b5bd0f7b4e868bdbc7b0.bindTooltip(
+                `<div>
+                     9. D51 – Kilmer flume
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28d4536ed1e10e6b0c2a3d734169af72 = L.circleMarker(
+                [-17.85544, 31.3761],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_d955008bcddc1f7ee719e84ffe61a2cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b7ad83b91abae6745312422fa6e6968 = $(`<div id="html_4b7ad83b91abae6745312422fa6e6968" style="width: 100.0%; height: 100.0%;">10. D12 — Goromonzi dam g/w<br>Mazowe | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Goromonzi town</div>`)[0];
+                popup_d955008bcddc1f7ee719e84ffe61a2cb.setContent(html_4b7ad83b91abae6745312422fa6e6968);
+            
+        
+
+        circle_marker_28d4536ed1e10e6b0c2a3d734169af72.bindPopup(popup_d955008bcddc1f7ee719e84ffe61a2cb)
+        ;
+
+        
+    
+    
+            circle_marker_28d4536ed1e10e6b0c2a3d734169af72.bindTooltip(
+                `<div>
+                     10. D12 – Goromonzi dam g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f59af503ed191f2e33816665bce1773d = L.circleMarker(
+                [-17.12, 31.78],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_0e5a7c8ba020f8c103a58b8b5a3883d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afdd6c5a894ef1a8e03711615bc36197 = $(`<div id="html_afdd6c5a894ef1a8e03711615bc36197" style="width: 100.0%; height: 100.0%;">11. D42 — Eben dam u/s g/w<br>Mazowe | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Umpfurudzi area</div>`)[0];
+                popup_0e5a7c8ba020f8c103a58b8b5a3883d8.setContent(html_afdd6c5a894ef1a8e03711615bc36197);
+            
+        
+
+        circle_marker_f59af503ed191f2e33816665bce1773d.bindPopup(popup_0e5a7c8ba020f8c103a58b8b5a3883d8)
+        ;
+
+        
+    
+    
+            circle_marker_f59af503ed191f2e33816665bce1773d.bindTooltip(
+                `<div>
+                     11. D42 – Eben dam u/s g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2d4a0afb2fc6157fc439a18b724980a = L.circleMarker(
+                [-16.81829, 31.27706],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_33f30366f65b6f0710779ced6fa779d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3abf80d0e192f2285d461f52026566f5 = $(`<div id="html_3abf80d0e192f2285d461f52026566f5" style="width: 100.0%; height: 100.0%;">12. D59 — Ruya falls flume & l/f notch<br>Mazowe | Submersible Sensor<br>Confidence: High<br>Exact named feature</div>`)[0];
+                popup_33f30366f65b6f0710779ced6fa779d0.setContent(html_3abf80d0e192f2285d461f52026566f5);
+            
+        
+
+        circle_marker_a2d4a0afb2fc6157fc439a18b724980a.bindPopup(popup_33f30366f65b6f0710779ced6fa779d0)
+        ;
+
+        
+    
+    
+            circle_marker_a2d4a0afb2fc6157fc439a18b724980a.bindTooltip(
+                `<div>
+                     12. D59 – Ruya falls flume & l/f notch
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f119f850326d33678d097e596aa1c98 = L.circleMarker(
+                [-18.18576, 32.80516],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_f0bb5f58c0fdbae1f14d0a86cbf38d64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d646400bc9081eb9c5b7e9c7ef23a5db = $(`<div id="html_d646400bc9081eb9c5b7e9c7ef23a5db" style="width: 100.0%; height: 100.0%;">13. F6 — Troutbeck dam d/s<br>Mazowe | Submersible Sensor<br>Confidence: High<br>Exact named feature: Upper Troutbeck Dam</div>`)[0];
+                popup_f0bb5f58c0fdbae1f14d0a86cbf38d64.setContent(html_d646400bc9081eb9c5b7e9c7ef23a5db);
+            
+        
+
+        circle_marker_4f119f850326d33678d097e596aa1c98.bindPopup(popup_f0bb5f58c0fdbae1f14d0a86cbf38d64)
+        ;
+
+        
+    
+    
+            circle_marker_4f119f850326d33678d097e596aa1c98.bindTooltip(
+                `<div>
+                     13. F6 – Troutbeck dam d/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8885176cd9fbd28c8dcea38975fe689e = L.circleMarker(
+                [-18.56119, 32.09581],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_582164b634e4d1f50e000eb85943066c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b537ab80c47da27e244a06b0c5c1d22 = $(`<div id="html_0b537ab80c47da27e244a06b0c5c1d22" style="width: 100.0%; height: 100.0%;">14. E131 — Rusape dam upstream<br>Save | Submersible Sensor<br>Confidence: High<br>Exact named feature: Rusape Dam</div>`)[0];
+                popup_582164b634e4d1f50e000eb85943066c.setContent(html_0b537ab80c47da27e244a06b0c5c1d22);
+            
+        
+
+        circle_marker_8885176cd9fbd28c8dcea38975fe689e.bindPopup(popup_582164b634e4d1f50e000eb85943066c)
+        ;
+
+        
+    
+    
+            circle_marker_8885176cd9fbd28c8dcea38975fe689e.bindTooltip(
+                `<div>
+                     14. E131 – Rusape dam upstream
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8def98648e43d8b1179cfb313523cb22 = L.circleMarker(
+                [-18.9, 32.45],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_d1ab2438501433188640f550b8126697 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a570b538a679ef3e3a4c0a274d65a393 = $(`<div id="html_a570b538a679ef3e3a4c0a274d65a393" style="width: 100.0%; height: 100.0%;">15. E162 — Odzi falls<br>Save | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Odzi falls area</div>`)[0];
+                popup_d1ab2438501433188640f550b8126697.setContent(html_a570b538a679ef3e3a4c0a274d65a393);
+            
+        
+
+        circle_marker_8def98648e43d8b1179cfb313523cb22.bindPopup(popup_d1ab2438501433188640f550b8126697)
+        ;
+
+        
+    
+    
+            circle_marker_8def98648e43d8b1179cfb313523cb22.bindTooltip(
+                `<div>
+                     15. E162 – Odzi falls
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_528f9bdd4c333055695d769d3a1d7b88 = L.circleMarker(
+                [-18.97, 32.42],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_77ce5bde733c3f36f7d5dd531e962b32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5411d6653827375a23e7d1297daecddb = $(`<div id="html_5411d6653827375a23e7d1297daecddb" style="width: 100.0%; height: 100.0%;">16. E130-R — Odzi gorge<br>Save | Radar Sensor<br>Confidence: Low<br>Planning proxy: Odzi gorge area</div>`)[0];
+                popup_77ce5bde733c3f36f7d5dd531e962b32.setContent(html_5411d6653827375a23e7d1297daecddb);
+            
+        
+
+        circle_marker_528f9bdd4c333055695d769d3a1d7b88.bindPopup(popup_77ce5bde733c3f36f7d5dd531e962b32)
+        ;
+
+        
+    
+    
+            circle_marker_528f9bdd4c333055695d769d3a1d7b88.bindTooltip(
+                `<div>
+                     16. E130-R – Odzi gorge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3dc23f6e1da3805b7869d5dcce5a8f9 = L.circleMarker(
+                [-18.97, 32.42],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_bdf2b98dca35a514851131d7db680a39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e1720be3345a164edcfcea04928f785 = $(`<div id="html_0e1720be3345a164edcfcea04928f785" style="width: 100.0%; height: 100.0%;">17. E130-S — Odzi gorge<br>Save | Submersible Sensor<br>Confidence: Medium<br>Same site as E130 radar sensor</div>`)[0];
+                popup_bdf2b98dca35a514851131d7db680a39.setContent(html_0e1720be3345a164edcfcea04928f785);
+            
+        
+
+        circle_marker_a3dc23f6e1da3805b7869d5dcce5a8f9.bindPopup(popup_bdf2b98dca35a514851131d7db680a39)
+        ;
+
+        
+    
+    
+            circle_marker_a3dc23f6e1da3805b7869d5dcce5a8f9.bindTooltip(
+                `<div>
+                     17. E130-S – Odzi gorge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_538579b1fe57c6c99d82f0a7762b444f = L.circleMarker(
+                [-19.15, 32.53],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_a91ee5783fc23e196cb9309fea000356 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c57ec9573672e6a2e669d73334c8828 = $(`<div id="html_3c57ec9573672e6a2e669d73334c8828" style="width: 100.0%; height: 100.0%;">18. E144 — Mpudzi dam d/s<br>Save | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Mupudzi/Mutare south area</div>`)[0];
+                popup_a91ee5783fc23e196cb9309fea000356.setContent(html_3c57ec9573672e6a2e669d73334c8828);
+            
+        
+
+        circle_marker_538579b1fe57c6c99d82f0a7762b444f.bindPopup(popup_a91ee5783fc23e196cb9309fea000356)
+        ;
+
+        
+    
+    
+            circle_marker_538579b1fe57c6c99d82f0a7762b444f.bindTooltip(
+                `<div>
+                     18. E144 – Mpudzi dam d/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dbeb4685e7bd99c6dc7d51c4ab23c752 = L.circleMarker(
+                [-19.38, 31.95],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_97438bb37ddee27b44609effd806d7ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_826e78e61db8f103042740559a2a24f2 = $(`<div id="html_826e78e61db8f103042740559a2a24f2" style="width: 100.0%; height: 100.0%;">19. E118 — Devure chisungwe<br>Save | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Devure/Chisungwe area</div>`)[0];
+                popup_97438bb37ddee27b44609effd806d7ff.setContent(html_826e78e61db8f103042740559a2a24f2);
+            
+        
+
+        circle_marker_dbeb4685e7bd99c6dc7d51c4ab23c752.bindPopup(popup_97438bb37ddee27b44609effd806d7ff)
+        ;
+
+        
+    
+    
+            circle_marker_dbeb4685e7bd99c6dc7d51c4ab23c752.bindTooltip(
+                `<div>
+                     19. E118 – Devure chisungwe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64043b6d9aa08fbe591e5848a5c0186a = L.circleMarker(
+                [-20.58, 31.59],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_d85ad7d6d4c2580cb31e0ecdcc8e902d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_197e5fdde135a793683e00f7265d8eeb = $(`<div id="html_197e5fdde135a793683e00f7265d8eeb" style="width: 100.0%; height: 100.0%;">20. E159 — Manjirenji u/s canal confluence<br>Runde | Submersible Sensor<br>Confidence: Medium<br>Near exact Manjirenji Dam</div>`)[0];
+                popup_d85ad7d6d4c2580cb31e0ecdcc8e902d.setContent(html_197e5fdde135a793683e00f7265d8eeb);
+            
+        
+
+        circle_marker_64043b6d9aa08fbe591e5848a5c0186a.bindPopup(popup_d85ad7d6d4c2580cb31e0ecdcc8e902d)
+        ;
+
+        
+    
+    
+            circle_marker_64043b6d9aa08fbe591e5848a5c0186a.bindTooltip(
+                `<div>
+                     20. E159 – Manjirenji u/s canal confluence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b120e9a14789d4e47be3bc1f52462ec = L.circleMarker(
+                [-20.59644, 31.60193],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_41c12db6f284a23376ee2e82e268479c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5867df9bc4edddf23832f7546efee705 = $(`<div id="html_5867df9bc4edddf23832f7546efee705" style="width: 100.0%; height: 100.0%;">21. E108 — Manjirenji dam u/s<br>Runde | Submersible Sensor<br>Confidence: High<br>Exact named feature: Manjirenji Dam</div>`)[0];
+                popup_41c12db6f284a23376ee2e82e268479c.setContent(html_5867df9bc4edddf23832f7546efee705);
+            
+        
+
+        circle_marker_1b120e9a14789d4e47be3bc1f52462ec.bindPopup(popup_41c12db6f284a23376ee2e82e268479c)
+        ;
+
+        
+    
+    
+            circle_marker_1b120e9a14789d4e47be3bc1f52462ec.bindTooltip(
+                `<div>
+                     21. E108 – Manjirenji dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_001abffeeafe5b60a0be497ee1f2880e = L.circleMarker(
+                [-21.0, 31.65],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_2036014429dbdb20af7454197df049ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7930966fd82c589f9771bf20ecfac5c = $(`<div id="html_a7930966fd82c589f9771bf20ecfac5c" style="width: 100.0%; height: 100.0%;">22. Runde bridge — Runde bridge<br>Runde | Radar Sensor<br>Confidence: Low<br>Planning proxy: major Runde crossing</div>`)[0];
+                popup_2036014429dbdb20af7454197df049ae.setContent(html_a7930966fd82c589f9771bf20ecfac5c);
+            
+        
+
+        circle_marker_001abffeeafe5b60a0be497ee1f2880e.bindPopup(popup_2036014429dbdb20af7454197df049ae)
+        ;
+
+        
+    
+    
+            circle_marker_001abffeeafe5b60a0be497ee1f2880e.bindTooltip(
+                `<div>
+                     22. Runde bridge – Runde bridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ceb42178cff18837d203dda939485751 = L.circleMarker(
+                [-20.35, 30.73],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_627fe875921323b0fe450fd209f56694 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9962c234aa38d3b97f10f0083390f9f1 = $(`<div id="html_9962c234aa38d3b97f10f0083390f9f1" style="width: 100.0%; height: 100.0%;">23. E4 — Nyajena d/s<br>Runde | Radar Sensor<br>Confidence: Low<br>Planning proxy: Nyajena/Mutirikwi area</div>`)[0];
+                popup_627fe875921323b0fe450fd209f56694.setContent(html_9962c234aa38d3b97f10f0083390f9f1);
+            
+        
+
+        circle_marker_ceb42178cff18837d203dda939485751.bindPopup(popup_627fe875921323b0fe450fd209f56694)
+        ;
+
+        
+    
+    
+            circle_marker_ceb42178cff18837d203dda939485751.bindTooltip(
+                `<div>
+                     23. E4 – Nyajena d/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33038c8a2cf634c748eabe4b3bc415d8 = L.circleMarker(
+                [-20.3, 30.64],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_15bff0bff5f6819e95def25abc595ea8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea267290db723550b43da4ef80b25a3e = $(`<div id="html_ea267290db723550b43da4ef80b25a3e" style="width: 100.0%; height: 100.0%;">24. E84 — Tokwe confluence u/s<br>Runde | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Tokwe confluence area</div>`)[0];
+                popup_15bff0bff5f6819e95def25abc595ea8.setContent(html_ea267290db723550b43da4ef80b25a3e);
+            
+        
+
+        circle_marker_33038c8a2cf634c748eabe4b3bc415d8.bindPopup(popup_15bff0bff5f6819e95def25abc595ea8)
+        ;
+
+        
+    
+    
+            circle_marker_33038c8a2cf634c748eabe4b3bc415d8.bindTooltip(
+                `<div>
+                     24. E84 – Tokwe confluence u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9b12d9c2995830404d9c3a34666aa574 = L.circleMarker(
+                [-20.3, 30.6],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_ffbc297306d5a094700f9590a1c3adf3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26d40505f4d3a4f7e16ab7054ed2fd6e = $(`<div id="html_26d40505f4d3a4f7e16ab7054ed2fd6e" style="width: 100.0%; height: 100.0%;">25. Tokwe bridge — Tokwe bridge<br>Tugwi | Radar Sensor<br>Confidence: Low<br>Planning proxy: Tokwe/Tugwi crossing</div>`)[0];
+                popup_ffbc297306d5a094700f9590a1c3adf3.setContent(html_26d40505f4d3a4f7e16ab7054ed2fd6e);
+            
+        
+
+        circle_marker_9b12d9c2995830404d9c3a34666aa574.bindPopup(popup_ffbc297306d5a094700f9590a1c3adf3)
+        ;
+
+        
+    
+    
+            circle_marker_9b12d9c2995830404d9c3a34666aa574.bindTooltip(
+                `<div>
+                     25. Tokwe bridge – Tokwe bridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f51107ecee49e33d0dd5af012366091 = L.circleMarker(
+                [-20.18, 30.75],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_91ea11a294d40eb300fa7cb808acb410 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18ce679ff808706801385596b3e4eb3e = $(`<div id="html_18ce679ff808706801385596b3e4eb3e" style="width: 100.0%; height: 100.0%;">26. E112 — Bganya<br>Runde | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Tokwe basin</div>`)[0];
+                popup_91ea11a294d40eb300fa7cb808acb410.setContent(html_18ce679ff808706801385596b3e4eb3e);
+            
+        
+
+        circle_marker_3f51107ecee49e33d0dd5af012366091.bindPopup(popup_91ea11a294d40eb300fa7cb808acb410)
+        ;
+
+        
+    
+    
+            circle_marker_3f51107ecee49e33d0dd5af012366091.bindTooltip(
+                `<div>
+                     26. E112 – Bganya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d958b28aff1f7dea0503af124d8ada6 = L.circleMarker(
+                [-20.86, 29.51],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_867f1a9e38d6ab3e10a468bed9b2fa9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5de8241d33d95e96a32585b3f52763ea = $(`<div id="html_5de8241d33d95e96a32585b3f52763ea" style="width: 100.0%; height: 100.0%;">27. B64 — Ingwizi dam u/s<br>Mzingwane | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Ingwizi basin</div>`)[0];
+                popup_867f1a9e38d6ab3e10a468bed9b2fa9f.setContent(html_5de8241d33d95e96a32585b3f52763ea);
+            
+        
+
+        circle_marker_2d958b28aff1f7dea0503af124d8ada6.bindPopup(popup_867f1a9e38d6ab3e10a468bed9b2fa9f)
+        ;
+
+        
+    
+    
+            circle_marker_2d958b28aff1f7dea0503af124d8ada6.bindTooltip(
+                `<div>
+                     27. B64 – Ingwizi dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_667b6e12377249ee26420585c7269f2b = L.circleMarker(
+                [-21.0, 29.42],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_a42a4a3b95fe7430fc5195b5a6c6e1bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b12ea52b79c862d6c0e3e93ce0a86c3 = $(`<div id="html_8b12ea52b79c862d6c0e3e93ce0a86c3" style="width: 100.0%; height: 100.0%;">28. New site — Mundi Bridge<br>Mzingwane | Radar Sensor<br>Confidence: Low<br>Planning proxy: southern Mzingwane basin</div>`)[0];
+                popup_a42a4a3b95fe7430fc5195b5a6c6e1bc.setContent(html_8b12ea52b79c862d6c0e3e93ce0a86c3);
+            
+        
+
+        circle_marker_667b6e12377249ee26420585c7269f2b.bindPopup(popup_a42a4a3b95fe7430fc5195b5a6c6e1bc)
+        ;
+
+        
+    
+    
+            circle_marker_667b6e12377249ee26420585c7269f2b.bindTooltip(
+                `<div>
+                     28. New site – Mundi Bridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5bccf5b6bed12f0e98fe93c8282a286 = L.circleMarker(
+                [-21.05, 29.37],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_50266789b81c84c56bbfdd68ce947b20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a527ce487f82be76c0ae0fa91c4ee81 = $(`<div id="html_8a527ce487f82be76c0ae0fa91c4ee81" style="width: 100.0%; height: 100.0%;">29. B62 — Doddieburn ranch<br>Mzingwane | Radar Sensor<br>Confidence: Low<br>Planning proxy: West Nicholson/Gwanda district</div>`)[0];
+                popup_50266789b81c84c56bbfdd68ce947b20.setContent(html_8a527ce487f82be76c0ae0fa91c4ee81);
+            
+        
+
+        circle_marker_a5bccf5b6bed12f0e98fe93c8282a286.bindPopup(popup_50266789b81c84c56bbfdd68ce947b20)
+        ;
+
+        
+    
+    
+            circle_marker_a5bccf5b6bed12f0e98fe93c8282a286.bindTooltip(
+                `<div>
+                     29. B62 – Doddieburn ranch
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57f2ba59b4ab7019fd8afbef49461708 = L.circleMarker(
+                [-21.08, 29.34],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_2bc10f02d36ad3b2b9dd3360cbae6e27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c61ee9e4f3620e3405f94cd661808037 = $(`<div id="html_c61ee9e4f3620e3405f94cd661808037" style="width: 100.0%; height: 100.0%;">30. B68 — Makwe d/s g/weir<br>Mzingwane | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Thuli/Gwanda district</div>`)[0];
+                popup_2bc10f02d36ad3b2b9dd3360cbae6e27.setContent(html_c61ee9e4f3620e3405f94cd661808037);
+            
+        
+
+        circle_marker_57f2ba59b4ab7019fd8afbef49461708.bindPopup(popup_2bc10f02d36ad3b2b9dd3360cbae6e27)
+        ;
+
+        
+    
+    
+            circle_marker_57f2ba59b4ab7019fd8afbef49461708.bindTooltip(
+                `<div>
+                     30. B68 – Makwe d/s g/weir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae49a074a5dee8b469aa8c6fd3b6a639 = L.circleMarker(
+                [-20.75842, 29.36061],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_5cd62b115f4f671a1419ad7c7bd857e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f98444500c75d513ae174995f7b70d7 = $(`<div id="html_1f98444500c75d513ae174995f7b70d7" style="width: 100.0%; height: 100.0%;">31. B66 — Silalabuhwa dam u/s<br>Mzingwane | Submersible Sensor<br>Confidence: High<br>Exact named feature: Silalabuhwa Dam</div>`)[0];
+                popup_5cd62b115f4f671a1419ad7c7bd857e7.setContent(html_1f98444500c75d513ae174995f7b70d7);
+            
+        
+
+        circle_marker_ae49a074a5dee8b469aa8c6fd3b6a639.bindPopup(popup_5cd62b115f4f671a1419ad7c7bd857e7)
+        ;
+
+        
+    
+    
+            circle_marker_ae49a074a5dee8b469aa8c6fd3b6a639.bindTooltip(
+                `<div>
+                     31. B66 – Silalabuhwa dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f1b18ba5d26b4f86bef5ec8b6276ac3 = L.circleMarker(
+                [-20.533, 29.285],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_6cc9b7a8ec75ee600b0c71f3cac095fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c679d2617ef87bbbdb97ab8bfaf2a4f = $(`<div id="html_8c679d2617ef87bbbdb97ab8bfaf2a4f" style="width: 100.0%; height: 100.0%;">32. B51 — Filabusi upper weir<br>Mzingwane | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Filabusi</div>`)[0];
+                popup_6cc9b7a8ec75ee600b0c71f3cac095fb.setContent(html_8c679d2617ef87bbbdb97ab8bfaf2a4f);
+            
+        
+
+        circle_marker_6f1b18ba5d26b4f86bef5ec8b6276ac3.bindPopup(popup_6cc9b7a8ec75ee600b0c71f3cac095fb)
+        ;
+
+        
+    
+    
+            circle_marker_6f1b18ba5d26b4f86bef5ec8b6276ac3.bindTooltip(
+                `<div>
+                     32. B51 – Filabusi upper weir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c9abc4e9c7b5a660f96e3bb5a6b011cd = L.circleMarker(
+                [-20.39306, 28.97389],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_e21a75dd17ab0105bcde1df7252d5a23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef8aa59ed5c958bb753acad62c887eb2 = $(`<div id="html_ef8aa59ed5c958bb753acad62c887eb2" style="width: 100.0%; height: 100.0%;">33. B30 — Umzingwane dam u/s<br>Mzingwane | Submersible Sensor<br>Confidence: High<br>Exact named feature: Mzingwane Dam</div>`)[0];
+                popup_e21a75dd17ab0105bcde1df7252d5a23.setContent(html_ef8aa59ed5c958bb753acad62c887eb2);
+            
+        
+
+        circle_marker_c9abc4e9c7b5a660f96e3bb5a6b011cd.bindPopup(popup_e21a75dd17ab0105bcde1df7252d5a23)
+        ;
+
+        
+    
+    
+            circle_marker_c9abc4e9c7b5a660f96e3bb5a6b011cd.bindTooltip(
+                `<div>
+                     33. B30 – Umzingwane dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_992051af90b2999e4cf6863881629164 = L.circleMarker(
+                [-20.56, 28.52],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_c5ff1b8769e08b627e64f2d8b1a3a728 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d6c2b7442d74ba65b9f6ac79793f31d = $(`<div id="html_0d6c2b7442d74ba65b9f6ac79793f31d" style="width: 100.0%; height: 100.0%;">34. B80 — Mayezane u/s g/w<br>Mzingwane | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Matobo/Maleme area</div>`)[0];
+                popup_c5ff1b8769e08b627e64f2d8b1a3a728.setContent(html_0d6c2b7442d74ba65b9f6ac79793f31d);
+            
+        
+
+        circle_marker_992051af90b2999e4cf6863881629164.bindPopup(popup_c5ff1b8769e08b627e64f2d8b1a3a728)
+        ;
+
+        
+    
+    
+            circle_marker_992051af90b2999e4cf6863881629164.bindTooltip(
+                `<div>
+                     34. B80 – Mayezane u/s g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4861d29b8eccd0f5a6056607abe86bbe = L.circleMarker(
+                [-20.94, 29.01],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_60117683e56a6afce9667ad7a467316b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d930f539e4f2257dd86aea62f7e4698a = $(`<div id="html_d930f539e4f2257dd86aea62f7e4698a" style="width: 100.0%; height: 100.0%;">35. B55 — Gwanda<br>Mzingwane | Radar Sensor<br>Confidence: Medium<br>Planning proxy: Gwanda town</div>`)[0];
+                popup_60117683e56a6afce9667ad7a467316b.setContent(html_d930f539e4f2257dd86aea62f7e4698a);
+            
+        
+
+        circle_marker_4861d29b8eccd0f5a6056607abe86bbe.bindPopup(popup_60117683e56a6afce9667ad7a467316b)
+        ;
+
+        
+    
+    
+            circle_marker_4861d29b8eccd0f5a6056607abe86bbe.bindTooltip(
+                `<div>
+                     35. B55 – Gwanda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_292c9afedac20bae2a6ba6032b0f6deb = L.circleMarker(
+                [-19.78, 29.37],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_d992d8fc1f8095e5af65c214b8d652f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cffe777f58fa19a790fd49895bb0ea24 = $(`<div id="html_cffe777f58fa19a790fd49895bb0ea24" style="width: 100.0%; height: 100.0%;">36. A32 — Sir godfrey huggins bridge<br>Gwayi | Radar Sensor<br>Confidence: Low<br>Planning proxy: Shangani corridor</div>`)[0];
+                popup_d992d8fc1f8095e5af65c214b8d652f7.setContent(html_cffe777f58fa19a790fd49895bb0ea24);
+            
+        
+
+        circle_marker_292c9afedac20bae2a6ba6032b0f6deb.bindPopup(popup_d992d8fc1f8095e5af65c214b8d652f7)
+        ;
+
+        
+    
+    
+            circle_marker_292c9afedac20bae2a6ba6032b0f6deb.bindTooltip(
+                `<div>
+                     36. A32 – Sir godfrey huggins bridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb06b588847ca6b5c44e06f2b18fb663 = L.circleMarker(
+                [-19.45, 29.82],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_ada5463ec5e9745cae4c997c6d17f581 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85bf420844765fee1b84f6821ed4ad9e = $(`<div id="html_85bf420844765fee1b84f6821ed4ad9e" style="width: 100.0%; height: 100.0%;">37. A13 — Gweru river causeway<br>Gwayi | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Gweru area</div>`)[0];
+                popup_ada5463ec5e9745cae4c997c6d17f581.setContent(html_85bf420844765fee1b84f6821ed4ad9e);
+            
+        
+
+        circle_marker_bb06b588847ca6b5c44e06f2b18fb663.bindPopup(popup_ada5463ec5e9745cae4c997c6d17f581)
+        ;
+
+        
+    
+    
+            circle_marker_bb06b588847ca6b5c44e06f2b18fb663.bindTooltip(
+                `<div>
+                     37. A13 – Gweru river causeway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b97fb9865e72dd0241905c417c666b7e = L.circleMarker(
+                [-18.65, 27.95],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_f138283ed6a3d792da4e2bd5cb5c0584 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4de9ed4ff83a49d664714861f56cb6b = $(`<div id="html_e4de9ed4ff83a49d664714861f56cb6b" style="width: 100.0%; height: 100.0%;">38. A68 — D/s mbembesi confluence<br>Gwayi | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Gwayi/Mbembesi confluence area</div>`)[0];
+                popup_f138283ed6a3d792da4e2bd5cb5c0584.setContent(html_e4de9ed4ff83a49d664714861f56cb6b);
+            
+        
+
+        circle_marker_b97fb9865e72dd0241905c417c666b7e.bindPopup(popup_f138283ed6a3d792da4e2bd5cb5c0584)
+        ;
+
+        
+    
+    
+            circle_marker_b97fb9865e72dd0241905c417c666b7e.bindTooltip(
+                `<div>
+                     38. A68 – D/s mbembesi confluence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d40068be8b012131194ec1656240c57 = L.circleMarker(
+                [-18.37, 27.82],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_627db9694b568d4c568f902618a7c9c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64aa413de1ed7f6324406551b6776c66 = $(`<div id="html_64aa413de1ed7f6324406551b6776c66" style="width: 100.0%; height: 100.0%;">39. A36 — Gwaai confluence<br>Gwayi | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Gwayi-Shangani confluence area</div>`)[0];
+                popup_627db9694b568d4c568f902618a7c9c8.setContent(html_64aa413de1ed7f6324406551b6776c66);
+            
+        
+
+        circle_marker_5d40068be8b012131194ec1656240c57.bindPopup(popup_627db9694b568d4c568f902618a7c9c8)
+        ;
+
+        
+    
+    
+            circle_marker_5d40068be8b012131194ec1656240c57.bindTooltip(
+                `<div>
+                     39. A36 – Gwaai confluence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5237fb96ffa4c0145c77a21a50e86f40 = L.circleMarker(
+                [-18.85, 27.65],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_ccc768ad2eb67ed964b69e231967acee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36497b01ec33ade4835eb2b134452007 = $(`<div id="html_36497b01ec33ade4835eb2b134452007" style="width: 100.0%; height: 100.0%;">40. A38 — Dahlia control section<br>Gwayi | Radar Sensor<br>Confidence: Low<br>Planning proxy: Gwayi basin west</div>`)[0];
+                popup_ccc768ad2eb67ed964b69e231967acee.setContent(html_36497b01ec33ade4835eb2b134452007);
+            
+        
+
+        circle_marker_5237fb96ffa4c0145c77a21a50e86f40.bindPopup(popup_ccc768ad2eb67ed964b69e231967acee)
+        ;
+
+        
+    
+    
+            circle_marker_5237fb96ffa4c0145c77a21a50e86f40.bindTooltip(
+                `<div>
+                     40. A38 – Dahlia control section
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1487c5ba341176c8c89c910fb59ce6a5 = L.circleMarker(
+                [-18.39, 26.82],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_08d7e42f316b294a9cf66129489b92b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95b364dc450b51392f562b7512c234fa = $(`<div id="html_95b364dc450b51392f562b7512c234fa" style="width: 100.0%; height: 100.0%;">41. A52 — Lukosi flume<br>Gwayi | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Lukosi/Hwange area</div>`)[0];
+                popup_08d7e42f316b294a9cf66129489b92b8.setContent(html_95b364dc450b51392f562b7512c234fa);
+            
+        
+
+        circle_marker_1487c5ba341176c8c89c910fb59ce6a5.bindPopup(popup_08d7e42f316b294a9cf66129489b92b8)
+        ;
+
+        
+    
+    
+            circle_marker_1487c5ba341176c8c89c910fb59ce6a5.bindTooltip(
+                `<div>
+                     41. A52 – Lukosi flume
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_573bec9f7010bb1eb5b7082e94a46c2f = L.circleMarker(
+                [-18.2, 29.2],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_53b07b66932a6c5468cf6907804859b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b013f66e77078b7867c2e46e313e933 = $(`<div id="html_5b013f66e77078b7867c2e46e313e933" style="width: 100.0%; height: 100.0%;">42. C59 — Sanyati copper queen g/w<br>Sanyati | Submersible Sensor<br>Confidence: Low<br>Planning proxy: central Sanyati basin</div>`)[0];
+                popup_53b07b66932a6c5468cf6907804859b5.setContent(html_5b013f66e77078b7867c2e46e313e933);
+            
+        
+
+        circle_marker_573bec9f7010bb1eb5b7082e94a46c2f.bindPopup(popup_53b07b66932a6c5468cf6907804859b5)
+        ;
+
+        
+    
+    
+            circle_marker_573bec9f7010bb1eb5b7082e94a46c2f.bindTooltip(
+                `<div>
+                     42. C59 – Sanyati copper queen g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1735bb695104c8803965b08b8988dafd = L.circleMarker(
+                [-18.25, 29.7],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_1cf5e5a224e36ffaaaded90b531fb230 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ab800f04c55119a412df71ba3a752b9 = $(`<div id="html_4ab800f04c55119a412df71ba3a752b9" style="width: 100.0%; height: 100.0%;">43. C84 — Copper queen g/w<br>Sanyati | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Mupfure/Chegutu corridor</div>`)[0];
+                popup_1cf5e5a224e36ffaaaded90b531fb230.setContent(html_4ab800f04c55119a412df71ba3a752b9);
+            
+        
+
+        circle_marker_1735bb695104c8803965b08b8988dafd.bindPopup(popup_1cf5e5a224e36ffaaaded90b531fb230)
+        ;
+
+        
+    
+    
+            circle_marker_1735bb695104c8803965b08b8988dafd.bindTooltip(
+                `<div>
+                     43. C84 – Copper queen g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a4905403bf8de9729356f9b9de2135a = L.circleMarker(
+                [-18.33, 29.88],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_d92f24071c2e4e0b7efc43c98bc5bc30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b57ad7f57a7e9fa7406aba2178d3e53d = $(`<div id="html_b57ad7f57a7e9fa7406aba2178d3e53d" style="width: 100.0%; height: 100.0%;">44. C94 — Munyati flume g/weir<br>Sanyati | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Munyati/Kadoma corridor</div>`)[0];
+                popup_d92f24071c2e4e0b7efc43c98bc5bc30.setContent(html_b57ad7f57a7e9fa7406aba2178d3e53d);
+            
+        
+
+        circle_marker_5a4905403bf8de9729356f9b9de2135a.bindPopup(popup_d92f24071c2e4e0b7efc43c98bc5bc30)
+        ;
+
+        
+    
+    
+            circle_marker_5a4905403bf8de9729356f9b9de2135a.bindTooltip(
+                `<div>
+                     44. C94 – Munyati flume g/weir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_757efb0b0c362408a995bce6b0914b5e = L.circleMarker(
+                [-18.43944, 29.88056],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_76fb348500ebaa22e02ae920a5abb3ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87b1a85bbe87c806fa71e47729d87f43 = $(`<div id="html_87b1a85bbe87c806fa71e47729d87f43" style="width: 100.0%; height: 100.0%;">45. C87 — Claw dam u/w g/weir<br>Sanyati | Submersible Sensor<br>Confidence: High<br>Exact named feature: Claw Dam</div>`)[0];
+                popup_76fb348500ebaa22e02ae920a5abb3ac.setContent(html_87b1a85bbe87c806fa71e47729d87f43);
+            
+        
+
+        circle_marker_757efb0b0c362408a995bce6b0914b5e.bindPopup(popup_76fb348500ebaa22e02ae920a5abb3ac)
+        ;
+
+        
+    
+    
+            circle_marker_757efb0b0c362408a995bce6b0914b5e.bindTooltip(
+                `<div>
+                     45. C87 – Claw dam u/w g/weir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d17dc32abc1a8bfdf57b5c73294fad3 = L.circleMarker(
+                [-18.65, 29.48],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_0fda74713001d01a085f2761ece9fa10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7105fcc3b4699176d21240c98dd51bae = $(`<div id="html_7105fcc3b4699176d21240c98dd51bae" style="width: 100.0%; height: 100.0%;">46. C18 — Munyati dyke g/w<br>Sanyati | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Munyati/Zhombe area</div>`)[0];
+                popup_0fda74713001d01a085f2761ece9fa10.setContent(html_7105fcc3b4699176d21240c98dd51bae);
+            
+        
+
+        circle_marker_1d17dc32abc1a8bfdf57b5c73294fad3.bindPopup(popup_0fda74713001d01a085f2761ece9fa10)
+        ;
+
+        
+    
+    
+            circle_marker_1d17dc32abc1a8bfdf57b5c73294fad3.bindTooltip(
+                `<div>
+                     46. C18 – Munyati dyke g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b98d19cd3fdd22379a4731f974a4ffd7 = L.circleMarker(
+                [-18.9, 29.84],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_5a479b17d4d1e1ff35bd89990df5f40d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b85fa12880ef23d444814a4517400708 = $(`<div id="html_b85fa12880ef23d444814a4517400708" style="width: 100.0%; height: 100.0%;">47. C11 — Cactus pool dam u/s<br>Sanyati | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Kwekwe area</div>`)[0];
+                popup_5a479b17d4d1e1ff35bd89990df5f40d.setContent(html_b85fa12880ef23d444814a4517400708);
+            
+        
+
+        circle_marker_b98d19cd3fdd22379a4731f974a4ffd7.bindPopup(popup_5a479b17d4d1e1ff35bd89990df5f40d)
+        ;
+
+        
+    
+    
+            circle_marker_b98d19cd3fdd22379a4731f974a4ffd7.bindTooltip(
+                `<div>
+                     47. C11 – Cactus pool dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89fe4270b98df70d4a21d334846c8eb1 = L.circleMarker(
+                [-18.95, 30.05],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_001900b20ad6ad0edca895eeef7cfcee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83875d196e3996412a35e949c1159573 = $(`<div id="html_83875d196e3996412a35e949c1159573" style="width: 100.0%; height: 100.0%;">48. C29 — Dutchman pool dam u/s<br>Sanyati | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Kwekwe/Sebakwe area</div>`)[0];
+                popup_001900b20ad6ad0edca895eeef7cfcee.setContent(html_83875d196e3996412a35e949c1159573);
+            
+        
+
+        circle_marker_89fe4270b98df70d4a21d334846c8eb1.bindPopup(popup_001900b20ad6ad0edca895eeef7cfcee)
+        ;
+
+        
+    
+    
+            circle_marker_89fe4270b98df70d4a21d334846c8eb1.bindTooltip(
+                `<div>
+                     48. C29 – Dutchman pool dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_517ebe6bbbc83713bf7026d13606c30d = L.circleMarker(
+                [-19.02587, 30.25421],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_70550c617eb32bff32ab9bb46523f601 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6d7457d6b2b630e9bb3703ee7c8b678 = $(`<div id="html_d6d7457d6b2b630e9bb3703ee7c8b678" style="width: 100.0%; height: 100.0%;">49. C50 — Sebakwe dam wall<br>Sanyati | Radar Sensor<br>Confidence: High<br>Exact named feature: Sebakwe Dam</div>`)[0];
+                popup_70550c617eb32bff32ab9bb46523f601.setContent(html_d6d7457d6b2b630e9bb3703ee7c8b678);
+            
+        
+
+        circle_marker_517ebe6bbbc83713bf7026d13606c30d.bindPopup(popup_70550c617eb32bff32ab9bb46523f601)
+        ;
+
+        
+    
+    
+            circle_marker_517ebe6bbbc83713bf7026d13606c30d.bindTooltip(
+                `<div>
+                     49. C50 – Sebakwe dam wall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b547177c0d86ebf365b5ef7cd90ca66 = L.circleMarker(
+                [-19.045, 30.27],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_ac6b399e6b2e3eb78ab7813e89fc4e66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75b0751e34152ceef79520d1a75344ca = $(`<div id="html_75b0751e34152ceef79520d1a75344ca" style="width: 100.0%; height: 100.0%;">50. C47 — Sebakwe dam u/s g/w<br>Sanyati | Submersible Sensor<br>Confidence: Medium<br>Near exact named feature: Sebakwe Dam upstream</div>`)[0];
+                popup_ac6b399e6b2e3eb78ab7813e89fc4e66.setContent(html_75b0751e34152ceef79520d1a75344ca);
+            
+        
+
+        circle_marker_5b547177c0d86ebf365b5ef7cd90ca66.bindPopup(popup_ac6b399e6b2e3eb78ab7813e89fc4e66)
+        ;
+
+        
+    
+    
+            circle_marker_5b547177c0d86ebf365b5ef7cd90ca66.bindTooltip(
+                `<div>
+                     50. C47 – Sebakwe dam u/s g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d39212db889ea11949425b7b7d42ecd5 = L.circleMarker(
+                [-19.06, 30.3],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_0caa658884272f005f94be9ddebc5073 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f76e95a498bd65e7682ecfa68463b283 = $(`<div id="html_f76e95a498bd65e7682ecfa68463b283" style="width: 100.0%; height: 100.0%;">51. C41 — Sebakwe dam u/s<br>Sanyati | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: upstream Sebakwe Dam</div>`)[0];
+                popup_0caa658884272f005f94be9ddebc5073.setContent(html_f76e95a498bd65e7682ecfa68463b283);
+            
+        
+
+        circle_marker_d39212db889ea11949425b7b7d42ecd5.bindPopup(popup_0caa658884272f005f94be9ddebc5073)
+        ;
+
+        
+    
+    
+            circle_marker_d39212db889ea11949425b7b7d42ecd5.bindTooltip(
+                `<div>
+                     51. C41 – Sebakwe dam u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03ed20d844c68fe866c53361faf40baa = L.circleMarker(
+                [-18.715, 30.41],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_e946546920b95f7230be335f8b98034f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e146512062359cd5cd4ce1a1a70ce839 = $(`<div id="html_e146512062359cd5cd4ce1a1a70ce839" style="width: 100.0%; height: 100.0%;">52. C6 — Ngezi dam u/s g/w<br>Sanyati | Submersible Sensor<br>Confidence: Medium<br>Near exact named feature: Ngezi Dam upstream</div>`)[0];
+                popup_e946546920b95f7230be335f8b98034f.setContent(html_e146512062359cd5cd4ce1a1a70ce839);
+            
+        
+
+        circle_marker_03ed20d844c68fe866c53361faf40baa.bindPopup(popup_e946546920b95f7230be335f8b98034f)
+        ;
+
+        
+    
+    
+            circle_marker_03ed20d844c68fe866c53361faf40baa.bindTooltip(
+                `<div>
+                     52. C6 – Ngezi dam u/s g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8d7487a42d821614bcc6de9b82bf2d4 = L.circleMarker(
+                [-18.69962, 30.39954],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_a5c2150901a6f96f9c40cf2f0f8e30c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a42bf5be81f492ad7abd19e7c674e55 = $(`<div id="html_0a42bf5be81f492ad7abd19e7c674e55" style="width: 100.0%; height: 100.0%;">53. C4 — Ngezi dam wall<br>Sanyati | Radar Sensor<br>Confidence: High<br>Exact named feature: Ngezi Dam</div>`)[0];
+                popup_a5c2150901a6f96f9c40cf2f0f8e30c7.setContent(html_0a42bf5be81f492ad7abd19e7c674e55);
+            
+        
+
+        circle_marker_d8d7487a42d821614bcc6de9b82bf2d4.bindPopup(popup_a5c2150901a6f96f9c40cf2f0f8e30c7)
+        ;
+
+        
+    
+    
+            circle_marker_d8d7487a42d821614bcc6de9b82bf2d4.bindTooltip(
+                `<div>
+                     53. C4 – Ngezi dam wall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e98c9813e91db9ff68428a714b46f2fb = L.circleMarker(
+                [-19.02, 30.89],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_4359780e1771d298abf043485c1c3f74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_718f9f0296b7fddfdacd477cf1144e66 = $(`<div id="html_718f9f0296b7fddfdacd477cf1144e66" style="width: 100.0%; height: 100.0%;">54. C33 — Sebakwe chivhu g/w<br>Sanyati | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Chivhu/Sebakwe headwaters</div>`)[0];
+                popup_4359780e1771d298abf043485c1c3f74.setContent(html_718f9f0296b7fddfdacd477cf1144e66);
+            
+        
+
+        circle_marker_e98c9813e91db9ff68428a714b46f2fb.bindPopup(popup_4359780e1771d298abf043485c1c3f74)
+        ;
+
+        
+    
+    
+            circle_marker_e98c9813e91db9ff68428a714b46f2fb.bindTooltip(
+                `<div>
+                     54. C33 – Sebakwe chivhu g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba1e25d883761678ab357afb73305204 = L.circleMarker(
+                [-18.25, 30.85],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_b9f0d12d8831d2ae609366658b5697d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_978721d2ec319cd06a920685ebec3edc = $(`<div id="html_978721d2ec319cd06a920685ebec3edc" style="width: 100.0%; height: 100.0%;">55. C70 — Mupfure beatrice g/w<br>Sanyati | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Beatrice/Mupfure area</div>`)[0];
+                popup_b9f0d12d8831d2ae609366658b5697d1.setContent(html_978721d2ec319cd06a920685ebec3edc);
+            
+        
+
+        circle_marker_ba1e25d883761678ab357afb73305204.bindPopup(popup_b9f0d12d8831d2ae609366658b5697d1)
+        ;
+
+        
+    
+    
+            circle_marker_ba1e25d883761678ab357afb73305204.bindTooltip(
+                `<div>
+                     55. C70 – Mupfure beatrice g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c45f22aa405654ddd57d30477899c3f1 = L.circleMarker(
+                [-19.34116, 29.99828],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_034129e0420d7a96c7edf6e039256945 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77a42e413311981f0dce1e193b673d85 = $(`<div id="html_77a42e413311981f0dce1e193b673d85" style="width: 100.0%; height: 100.0%;">56. C16 — White waters dam wall<br>Sanyati | Radar Sensor<br>Confidence: High<br>Exact named feature: Whitewaters Dam (Midlands)</div>`)[0];
+                popup_034129e0420d7a96c7edf6e039256945.setContent(html_77a42e413311981f0dce1e193b673d85);
+            
+        
+
+        circle_marker_c45f22aa405654ddd57d30477899c3f1.bindPopup(popup_034129e0420d7a96c7edf6e039256945)
+        ;
+
+        
+    
+    
+            circle_marker_c45f22aa405654ddd57d30477899c3f1.bindTooltip(
+                `<div>
+                     56. C16 – White waters dam wall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d499a416f889c0f890ad364b4f19d01 = L.circleMarker(
+                [-17.4, 30.1],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_e18736f1e93033cfc66695cc3e5456ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_412c29b18227334884498b9f6ff017b6 = $(`<div id="html_412c29b18227334884498b9f6ff017b6" style="width: 100.0%; height: 100.0%;">57. C75 — Manyame_confl<br>Mukadzi | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Manyame/Mukadzi confluence</div>`)[0];
+                popup_e18736f1e93033cfc66695cc3e5456ce.setContent(html_412c29b18227334884498b9f6ff017b6);
+            
+        
+
+        circle_marker_1d499a416f889c0f890ad364b4f19d01.bindPopup(popup_e18736f1e93033cfc66695cc3e5456ce)
+        ;
+
+        
+    
+    
+            circle_marker_1d499a416f889c0f890ad364b4f19d01.bindTooltip(
+                `<div>
+                     57. C75 – Manyame_confl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_398dd384ba702518371fb1931bed6ef9 = L.circleMarker(
+                [-17.3, 30.2],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_1d5f81487c1f730b599b4ffeb36e226f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_120f9dc3de8e43b613d5afafa48aa834 = $(`<div id="html_120f9dc3de8e43b613d5afafa48aa834" style="width: 100.0%; height: 100.0%;">58. C64 — Nyakapupu g/w<br>Manyame | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Manyame/Chinhoyi area</div>`)[0];
+                popup_1d5f81487c1f730b599b4ffeb36e226f.setContent(html_120f9dc3de8e43b613d5afafa48aa834);
+            
+        
+
+        circle_marker_398dd384ba702518371fb1931bed6ef9.bindPopup(popup_1d5f81487c1f730b599b4ffeb36e226f)
+        ;
+
+        
+    
+    
+            circle_marker_398dd384ba702518371fb1931bed6ef9.bindTooltip(
+                `<div>
+                     58. C64 – Nyakapupu g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a08a25ff7cbebca2daf35291a1f1b003 = L.circleMarker(
+                [-17.35, 30.35],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_05029d5676495888ad010fda9ab55b02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_092a8ba4267fd9d15aba6cb2f0052656 = $(`<div id="html_092a8ba4267fd9d15aba6cb2f0052656" style="width: 100.0%; height: 100.0%;">59. C104 — Mukwadzi_dam_u/s<br>Mukwadzi | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Mashonaland West/Mukwadzi area</div>`)[0];
+                popup_05029d5676495888ad010fda9ab55b02.setContent(html_092a8ba4267fd9d15aba6cb2f0052656);
+            
+        
+
+        circle_marker_a08a25ff7cbebca2daf35291a1f1b003.bindPopup(popup_05029d5676495888ad010fda9ab55b02)
+        ;
+
+        
+    
+    
+            circle_marker_a08a25ff7cbebca2daf35291a1f1b003.bindTooltip(
+                `<div>
+                     59. C104 – Mukwadzi_dam_u/s
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_569e38ba5ee7b02225b4a868798ce67e = L.circleMarker(
+                [-17.32, 30.38],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_f6bd1f97d344f0f86710f828165ac7bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d08cefde2cc2b2d2a050e77193fead26 = $(`<div id="html_d08cefde2cc2b2d2a050e77193fead26" style="width: 100.0%; height: 100.0%;">60. C105 — Muneni u/c mazvikadei dam<br>Muneni | Submersible Sensor<br>Confidence: Medium<br>Planning proxy: Mazvikadei area</div>`)[0];
+                popup_f6bd1f97d344f0f86710f828165ac7bc.setContent(html_d08cefde2cc2b2d2a050e77193fead26);
+            
+        
+
+        circle_marker_569e38ba5ee7b02225b4a868798ce67e.bindPopup(popup_f6bd1f97d344f0f86710f828165ac7bc)
+        ;
+
+        
+    
+    
+            circle_marker_569e38ba5ee7b02225b4a868798ce67e.bindTooltip(
+                `<div>
+                     60. C105 – Muneni u/c mazvikadei dam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b09f2dd6ec8962b07abd0ac93d54bdfc = L.circleMarker(
+                [-17.2, 30.05],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_8e3dc9e235b0379d09d454e758de410c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e95c724ccc038fab072f7fd3a05e2dc5 = $(`<div id="html_e95c724ccc038fab072f7fd3a05e2dc5" style="width: 100.0%; height: 100.0%;">61. C77 — Yomba_d/s_g/w<br>Manyame | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Manyame basin</div>`)[0];
+                popup_8e3dc9e235b0379d09d454e758de410c.setContent(html_e95c724ccc038fab072f7fd3a05e2dc5);
+            
+        
+
+        circle_marker_b09f2dd6ec8962b07abd0ac93d54bdfc.bindPopup(popup_8e3dc9e235b0379d09d454e758de410c)
+        ;
+
+        
+    
+    
+            circle_marker_b09f2dd6ec8962b07abd0ac93d54bdfc.bindTooltip(
+                `<div>
+                     61. C77 – Yomba_d/s_g/w
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ceebbf5f00fffe61002090c213b23d36 = L.circleMarker(
+                [-17.05, 30.62],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_4acbe07cc26ba8c38e13e97f5081234e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be58acb89a374353505d636c79aff601 = $(`<div id="html_be58acb89a374353505d636c79aff601" style="width: 100.0%; height: 100.0%;">62. C68 — Aurelia flumes<br>Msengezi | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Aurelia/Msengezi area</div>`)[0];
+                popup_4acbe07cc26ba8c38e13e97f5081234e.setContent(html_be58acb89a374353505d636c79aff601);
+            
+        
+
+        circle_marker_ceebbf5f00fffe61002090c213b23d36.bindPopup(popup_4acbe07cc26ba8c38e13e97f5081234e)
+        ;
+
+        
+    
+    
+            circle_marker_ceebbf5f00fffe61002090c213b23d36.bindTooltip(
+                `<div>
+                     62. C68 – Aurelia flumes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fb08fbb64f94f2260c1b3a0630a1ee2 = L.circleMarker(
+                [-16.32, 30.76],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_8575420386e831df61ee0edef4a29ddb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7da8e1637be5b4311c9871472c2ee68e = $(`<div id="html_7da8e1637be5b4311c9871472c2ee68e" style="width: 100.0%; height: 100.0%;">63. C109 — Chidodo<br>Msengezi | Submersible Sensor<br>Confidence: Low<br>Planning proxy: Mbire/Chidodo area</div>`)[0];
+                popup_8575420386e831df61ee0edef4a29ddb.setContent(html_7da8e1637be5b4311c9871472c2ee68e);
+            
+        
+
+        circle_marker_7fb08fbb64f94f2260c1b3a0630a1ee2.bindPopup(popup_8575420386e831df61ee0edef4a29ddb)
+        ;
+
+        
+    
+    
+            circle_marker_7fb08fbb64f94f2260c1b3a0630a1ee2.bindTooltip(
+                `<div>
+                     63. C109 – Chidodo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87363a6b0ee411ee17b73108ab60177b = L.circleMarker(
+                [-16.17, 30.57],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_99f7b78bce1b3ce7cbaa314aef134058 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0711e75ccff23cba45c4f2f04005fa32 = $(`<div id="html_0711e75ccff23cba45c4f2f04005fa32" style="width: 100.0%; height: 100.0%;">64. Mushumbi bridge — MUSHUMBI POOLS BRIDGE<br>Mushumbi pools bridge | Radar Sensor<br>Confidence: Medium<br>Planning proxy: Mushumbi Pools</div>`)[0];
+                popup_99f7b78bce1b3ce7cbaa314aef134058.setContent(html_0711e75ccff23cba45c4f2f04005fa32);
+            
+        
+
+        circle_marker_87363a6b0ee411ee17b73108ab60177b.bindPopup(popup_99f7b78bce1b3ce7cbaa314aef134058)
+        ;
+
+        
+    
+    
+            circle_marker_87363a6b0ee411ee17b73108ab60177b.bindTooltip(
+                `<div>
+                     64. Mushumbi bridge – MUSHUMBI POOLS BRIDGE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62600f77f0e2051ff60d0e537471f8dc = L.circleMarker(
+                [-16.12, 30.28],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d966c092358d9a8b8351606cfb0eeb32);
+        
+    
+        var popup_9e2fec7ed932e14e9c69d24f9012d683 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_223e47ecd40f582b662a36472cdefa68 = $(`<div id="html_223e47ecd40f582b662a36472cdefa68" style="width: 100.0%; height: 100.0%;">65. Angwa bridge — Angwa<br>Angwa | Radar Sensor<br>Confidence: Low<br>Planning proxy: Angwa/Mbire area</div>`)[0];
+                popup_9e2fec7ed932e14e9c69d24f9012d683.setContent(html_223e47ecd40f582b662a36472cdefa68);
+            
+        
+
+        circle_marker_62600f77f0e2051ff60d0e537471f8dc.bindPopup(popup_9e2fec7ed932e14e9c69d24f9012d683)
+        ;
+
+        
+    
+    
+            circle_marker_62600f77f0e2051ff60d0e537471f8dc.bindTooltip(
+                `<div>
+                     65. Angwa bridge – Angwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
